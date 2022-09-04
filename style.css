@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap'); 
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    background-color: var(--Pale-blue);
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+@media (min-width: 765px) {
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+    }
+}
+
+#card {
+    max-width: 355px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 15vh;
+}
+
+#hero {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+#content {
+    text-align: center;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    color: var(--Dark-blue);
+}
+
+.paragraph {
+    color: var(--Desaturated-blue);
+}
+
+#price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--Very-pale-blue);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+#price-container > a:hover {
+    filter: brightness(140%);
+}
+
+#price-container > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#price-container > div > div > p:nth-child(1) {
+    color: var(--Dark-blue);
+    font-weight: 700;
+}
+
+#btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn {
+    width: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-purple {
+    background-color: var(--Bright-blue);
+    color: white;
+}
+
+.btn-purple:hover {
+    filter: brightness(160%);
+}
+
+.btn-transparent {
+    color: var(--Desaturated-blue);
+}
+
+.btn-transparent:hover {
+    color: var(--Dark-blue);
+}
